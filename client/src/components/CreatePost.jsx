@@ -8,10 +8,8 @@ export default function CreatePost (props) {
   let navigate = useNavigate()
   let initialPostValues = { 
     authorId: props.user.id, 
-    imgSrc: '',
-    captions: '',
-    location: '',
-    numLikes: 0
+    cardId: '',
+    report: '',
   }
   const [newPostValues, setNewPostValues] = useState(initialPostValues)
 
@@ -35,29 +33,28 @@ export default function CreatePost (props) {
     <div className='createpostpage'>
       <form className="createpost" onSubmit={handlePostSubmit}>
           <div className="input-wrapper">
-            <label htmlFor="image">Image</label>
+            <label htmlFor="cardId">cardId</label>
             <input
               onChange={handlePostChange}
-              name="imgSrc"
+              name="cardId"
               type="text"
-              placeholder="image URL"
-              value={newPostValues.imgSrc}
+              placeholder="Which Card?"
+              value={newPostValues.cardId}
               required
             />
           </div>
           <div className="input-wrapper">
-            <label htmlFor="caption">Caption</label>
+            <label htmlFor="report">What happened on this day?</label>
             <input
               onChange={handlePostChange}
-              name="captions"
+              name="reports"
               type="text"
-              placeholder="caption"
-              value={newPostValues.captions}
-              required
+              placeholder="Was it in the cards?"
+              value={newPostValues.report}
             />
           </div>
 
-          <div className="input-wrapper">
+          {/* <div className="input-wrapper">
             <label htmlFor="location">Location</label>
             <input
               onChange={handlePostChange}
@@ -66,7 +63,7 @@ export default function CreatePost (props) {
               value={newPostValues.location}
               required
             />
-          </div>
+          </div> */}
           <button
           >
             Create Post
