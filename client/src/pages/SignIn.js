@@ -62,7 +62,6 @@ const SignIn = (props) => {
               </p>
             </div>
             <button
-              type="submit"
               className="singinbutton"
               onSubmit={handleSubmit}
               disabled={!formValues.email || !formValues.password}

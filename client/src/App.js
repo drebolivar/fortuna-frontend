@@ -11,7 +11,7 @@ import CreatePost from './components/CreatePost'
 import Client from './services/api'
 import { BASE_URL } from './services/api'
 import axios from 'axios'
-// import { CheckSession } from './services/Auth'
+import { CheckSession } from './services/Auth'
 
 function App() {
   let navigate = useNavigate()
@@ -23,7 +23,7 @@ function App() {
   const [allUserPosts, setAllUserPosts] = useState([])
   //useEffectToggler is used as an artificial way to re-fire useeffect to gather updated data
   const [useEffectToggler, setUseEffectToggler] = useState(false)
-  // const [tokenString, setTokenString] = useState('')
+  const [tokenString, setTokenString] = useState('')
 
   //gets full user data including prof pic from the user variable(which is just payload)
   const getUserData = async () => {
@@ -50,11 +50,11 @@ function App() {
   }
 
   //checks to see if there is a valid token in the local storage and if so sets user to the token payload
-  // const checkToken = async () => {
-  //   const user = await CheckSession()
-  //   setUser(user)
-  //   toggleAuthenticated(true)
-  // }
+  const checkToken = async () => {
+    const user = await CheckSession()
+    setUser(user)
+    toggleAuthenticated(true)
+  }
 
   //gets all posts of the currently logged in user
   const getUserPosts = async () => {
@@ -67,19 +67,19 @@ function App() {
   }
 
   useEffect(() => {
-    // const token = localStorage.getItem('token')
-    // setTokenString(token)
+    const token = localStorage.getItem('token')
+    setTokenString(token)
     // //checks to see if there is a token present in local storage
-    // if (token) {
-    //   checkToken()
-    //   //waits to gather data until user is set, this prevents various errors of API calls with undefined data
-    if (user) {
-      getUserData()
-      getAllPosts()
-      getUserPosts()
+    if (token) {
+      checkToken()
+      //   //waits to gather data until user is set, this prevents various errors of API calls with undefined data
+      if (user) {
+        getUserData()
+        getAllPosts()
+        getUserPosts()
+      }
     }
-  })
-  // }, [useEffectToggler, authenticated])
+  }, [useEffectToggler, authenticated])
 
   return (
     <div className="App">
@@ -94,7 +94,7 @@ function App() {
           element={
             <SignIn
               setUser={setUser}
-              // toggleAuthenticated={toggleAuthenticated}
+              toggleAuthenticated={toggleAuthenticated}
               setUseEffectToggler={setUseEffectToggler}
               useEffectToggler={useEffectToggler}
             />
@@ -106,7 +106,7 @@ function App() {
           element={
             <CreatePost
               user={userData}
-              // token={tokenString}
+              token={tokenString}
               useEffectToggler={useEffectToggler}
               setUseEffectToggler={setUseEffectToggler}
             />
@@ -118,9 +118,9 @@ function App() {
             <Feed
               user={userData}
               posts={allPosts}
-              // authenticated={authenticated}
-              // useEffectToggler={useEffectToggler}
-              // setUseEffectToggler={setUseEffectToggler}
+              authenticated={authenticated}
+              useEffectToggler={useEffectToggler}
+              setUseEffectToggler={setUseEffectToggler}
             />
           }
         />
