@@ -47,8 +47,8 @@ export default function CreatePost (props) {
             <label htmlFor="report">What happened on this day?</label>
             <input
               onChange={handlePostChange}
-              name="reports"
-              type="text"
+              name="report"
+              type="string"
               placeholder="Was it in the cards?"
               value={newPostValues.report}
             />

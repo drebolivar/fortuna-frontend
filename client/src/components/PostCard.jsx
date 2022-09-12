@@ -11,8 +11,8 @@ export default function PostCard (props) {
 
   let navigate = useNavigate()
   let [visible, setVisible] = useState(false)
-  let [numOfLikes, setNumOfLikes] = useState({numLikes: props.post.numLikes})
-  let [liked, setLiked] = useState(false)
+  // let [numOfLikes, setNumOfLikes] = useState({numLikes: props.post.numLikes})
+  // let [liked, setLiked] = useState(false)
   let [makeCommentVisible, setVisibleComment] = useState(false)
 
   const deletePost = () => {
@@ -32,33 +32,40 @@ export default function PostCard (props) {
   }
 
   //handles the like post button (still a work in progress)
-  const updateLikes = () => {
-    let likes = props.post.numLikes
+  // const updateLikes = () => {
+  //   let likes = props.post.numLikes
     // liked ? likes++ : likes--
     // console.log(likes)
     // console.log(liked)
-    likes++
-    setNumOfLikes({numLikes: likes})
-    let res = Client.put(`${BASE_URL}/feed/${props.post.id}`, numOfLikes)
-    setLiked(!liked)
-    console.log(likes)
-    console.log(numOfLikes)
-    props.setUseEffectToggler(!props.useEffectToggler) 
-    navigate('/feed')
-  }
+  //   likes++
+  //   setNumOfLikes({numLikes: likes})
+  //   let res = Client.put(`${BASE_URL}/feed/${props.post.id}`, numOfLikes)
+  //   setLiked(!liked)
+  //   console.log(likes)
+  //   console.log(numOfLikes)
+  //   props.setUseEffectToggler(!props.useEffectToggler) 
+  //   navigate('/feed')
+  // }
 
   return props.post ? (
     <div>
       <div className="header-img-container">
         <img src={props.post.User.profileImg} alt='profilepic' className='profilepic'/>
-        <h2 className='usernamefeed' style={{display: 'inline'}}>{props.post.User.username}</h2>
+        <h2 className='usernamefeed' style={{display: 'inline'}}>{props.post.User.userName}</h2>
       </div>
       <div className="card-img-container">
-        <img src={props.post.imgSrc} alt='post' className='post-image'/>
+      <img src={props.post.Card.imgSrc}/>
+      <h1>Card: {props.post.Card.cardName}</h1>
+      <h1>Fortune: {props.post.Card.fortuneTelling}</h1>
+      <h1>Keywords: {props.post.Card.keywords}</h1>
+      <h1>Light: {props.post.Card.light}</h1>
+      <h1>Shadow: {props.post.Card.shadow}</h1>
+      <h1>Questions to ask yourself: {props.post.Card.questionsToAsk}</h1>
+
+
         <div className="caption-container">
-        <p className='caption'>{props.post.captions}</p>
+        <p className='caption'>{props.post.report}</p>
         </div>
-        <button className="likes" onClick={updateLikes}>{props.post.numLikes}<br></br>Likes</button>
       </div>
       <div className="button-container">
         <button className="likes"onClick={deletePost} style= {{display: props.post.authorId === props.user.id ? 'block' : 'none'}}>Delete</button>
