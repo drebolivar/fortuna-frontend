@@ -2,18 +2,18 @@
 
 .App {
   text-align: center;
-  font-family: 'DynaPuff', cursive;
+  font-family: 'arial';
 }
 body{
   background-color: rgb(155, 91, 155);
   justify-content: center;
   align-items: center;
-  font-family: 'DynaPuff', cursive;
+  font-family: 'arial';
 }
 .register, .signin{
   justify-content: center;
   display: grid;
-  font-family: 'DynaPuff', cursive;
+  font-family: 'arial';
   color: rgb(43, 10, 89);
   position: relative;
   width: 130%;
@@ -25,7 +25,7 @@ body{
   box-shadow: 14px 14px 20px rgb(43, 10, 89), -14px -14px 20px rgb(43, 10, 89);
 }
 .signinpage, .registerpage{
-  font-family: 'DynaPuff', cursive;
+  font-family: 'arial';
   justify-content: center;
   display: grid;
   align-items: center;
@@ -47,7 +47,7 @@ body{
 }
 
 label, input {
-  font-family: 'DynaPuff', cursive;
+  font-family: 'arial';
   display: block;
   width: 100%;
   padding: 0;
@@ -69,7 +69,7 @@ input::placeholder {
 }
 
 input {
-  font-family: 'DynaPuff', cursive;
+  font-family: 'arial';
   background: #ecf0f3;
   padding: 10px;
   padding-left: 20px;
@@ -80,12 +80,12 @@ input {
 }
 
  button {
-  font-family: 'DynaPuff', cursive;
+  font-family: 'arial';
   color: rgb(43, 10, 89);
   margin-top: 30px;
-  background: rgb(70, 192, 115);
+  background: rgb(245, 165, 227);
   height: 50px;
-  border-radius: 90px;
+  border-radius: 30px;
   cursor: pointer;
   font-weight: 900;
   box-shadow: 6px 6px 6px rgb(43, 10, 89), -6px -6px 6px rgb(43, 10, 89);
@@ -96,12 +96,12 @@ button:hover {
   box-shadow: none;
 }
 .feed, .profile, .newpost{
-font-family: 'DynaPuff', cursive;
+font-family: 'arial';
 }
 .protected{
   justify-content: center;
   display: grid;
-  font-family: 'DynaPuff', cursive;
+  font-family: 'arial';
   color: rgb(43, 10, 89);
   background: white;
   width: 350px;
@@ -119,7 +119,7 @@ font-family: 'DynaPuff', cursive;
   justify-content: center;
   display: grid;
   align-items: center;
-  font-family: 'DynaPuff', cursive;
+  font-family: 'arial';
   color: rgb(43, 10, 89);
   width: 350px;
   height: 425px;
@@ -197,7 +197,7 @@ font-family: 'DynaPuff', cursive;
   align-items:center;
   /* margin-top: -2.5rem;
   margin-left: 1rem */
-  justify-content: center;
+  justify-content: right;
 }
 
 .like {
@@ -260,8 +260,8 @@ a{
   /* background-color:crimson; */
 }
 .post-image{
-  max-width: 75%;
-  max-height: 75%;
+  max-width: 50%;
+  max-height: 50%;
 }
 
 .caption-container{
@@ -280,8 +280,8 @@ width: auto;
 
 
 .card-img-container{
-display: flex;
-flex-direction: column;
+display:flex;
+flex-direction: row;
 justify-content: center;
 align-items: center;
 height: auto;
@@ -289,8 +289,12 @@ width: auto;
 /* margin-bottom: 20%;
 margin-top: 20%; */
 border-radius: 10px;
-background: white;
+background: rgb(114, 206, 255);
 box-shadow: 1px 1px 1px rgb(43, 10, 89), -1px -1px 1px rgb(43, 10, 89);
+}
+
+.fortune-contrainer{
+display: inline;
 }
 .header-img-container{
 display: flex;
@@ -304,7 +308,7 @@ box-shadow: 1px 1px 1px rgb(43, 10, 89), -1px -1px 1px rgb(43, 10, 89);
 .profilepic{
   width: 4rem;
   height: 4rem;
-  border-radius: 50%;
+  border-radius: 20%;
   cursor: pointer;
   object-fit: cover;  
   align-items: flex-start;
@@ -352,7 +356,7 @@ box-shadow: 1px 1px 1px rgb(43, 10, 89), -1px -1px 1px rgb(43, 10, 89);
   justify-content: center;
   align-items: center;
   display: grid;
-  font-family: 'DynaPuff', cursive;
+  font-family: 'arial';
   color: rgb(43, 10, 89);
   width: auto;
   height: auto;

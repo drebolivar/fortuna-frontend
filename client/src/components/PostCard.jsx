@@ -54,26 +54,25 @@ export default function PostCard (props) {
         <h2 className='usernamefeed' style={{display: 'inline'}}>{props.post.User.userName}</h2>
       </div>
       <div className="card-img-container">
-      <img src={props.post.Card.imgSrc}/>
-      <h1>Card: {props.post.Card.cardName}</h1>
-      <h1>Fortune: {props.post.Card.fortuneTelling}</h1>
-      <h1>Keywords: {props.post.Card.keywords}</h1>
-      <h1>Light: {props.post.Card.light}</h1>
-      <h1>Shadow: {props.post.Card.shadow}</h1>
-      <h1>Questions to ask yourself: {props.post.Card.questionsToAsk}</h1>
-
-
-        <div className="caption-container">
+      <img src={props.post.Card.cardImg}/>
+      <div className="fortune-contrainer">
+      <p>Card: <br></br>{props.post.Card.cardName}</p>
+      <p>Fortune: <br></br>{props.post.Card.fortuneTelling}</p>
+      <p>Keywords:<br></br> {props.post.Card.keywords}</p>
+      <p>Light: <br></br>{props.post.Card.light}</p>
+      <p>Shadow: <br></br>{props.post.Card.shadow}</p>
+      <p>Questions to ask yourself: <br></br>{props.post.Card.questionsToAsk}</p>
+      </div>
+      </div>
+      <div className="report-container">
         <p className='caption'>{props.post.report}</p>
         </div>
-      </div>
       <div className="button-container">
         <button className="likes"onClick={deletePost} style= {{display: props.post.authorId === props.user.id ? 'block' : 'none'}}>Delete</button>
         <button className="likes"src="https://cdn-icons-png.flaticon.com/128/1077/1077035.png" onClick={updatePost} style= {{display: props.post.authorId === props.user.id ? 'block' : 'none'}}>Update Post</button>
         <button className="likes" onClick={showCommentForm}>Comment</button>
       </div>
       <UpdatePost post={props.post} visible={visible} setVisible={setVisible}/>
-    
       <CreateComment  visible={makeCommentVisible} postId={props.post.id} userId={props.user.id} useEffectToggler={props.useEffectToggler} setUseEffectToggler={props.setUseEffectToggler}/>
       <section className="card-text">
         {props.post.Comments.map((currentComment) => (
@@ -85,7 +84,7 @@ export default function PostCard (props) {
     </div>
   ) : (
     <div>
-      <h1>Loading</h1>
+      <p>Loading</p>
     </div>
   )
   }
