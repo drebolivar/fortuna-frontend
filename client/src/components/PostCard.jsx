@@ -62,6 +62,7 @@ export default function PostCard (props) {
       <p>Light: <br></br>{props.post.Card.light}</p>
       <p>Shadow: <br></br>{props.post.Card.shadow}</p>
       <p>Questions to ask yourself: <br></br>{props.post.Card.questionsToAsk}</p>
+      <p>Logged at: {props.post.Card.createdAt}</p>
       </div>
       </div>
       <div className="report-container">

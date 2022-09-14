@@ -141,18 +141,18 @@ font-family: 'arial';
 
 .icon {
   position: relative;
-  background: #ffffff;
-  border-radius: 50%;
-  padding: 15px;
+  /* background: #ffffff;
+  border-radius: 50%; */
+  /* padding: 15px; */
   margin: 10px;
-  width: 50px;
-  height: 50px;
+  width: 64px;
+  height: 64px;
   font-size: 18px;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+  /* box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1); */
   cursor: pointer;
   transition: all 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 }
@@ -237,7 +237,7 @@ a{
   block-size: auto;
   justify-content: center;
   align-items: center;
-  margin: 0 20% 0 20%;
+  margin: 0 33% 0 33%;
 }
 .homepage{
   display: flex;
@@ -265,25 +265,33 @@ a{
 }
 
 .caption-container{
+align-items: left;
+justify-content: left;
 color: #262626;
 font-size: 14px;
 cursor: pointer;
 font-weight: 600;
 text-align: center;
-width: auto;
+width: 100%;
 }
 
 .caption {
-  text-align: center;
+  text-align: left;
+  align-items: left;
+  justify-content: left;
   padding-bottom: 5%;
+  background-color: #d6ff6f;
+  border-radius: 20px;
+  border: #262626 2px solid;
+  width: 100%;
 }
 
 
 .card-img-container{
 display:flex;
 flex-direction: row;
-justify-content: center;
-align-items: center;
+/* justify-content: center; */
+align-items:flex-start;
 height: auto;
 width: auto;
 /* margin-bottom: 20%;
@@ -352,7 +360,7 @@ box-shadow: 1px 1px 1px rgb(43, 10, 89), -1px -1px 1px rgb(43, 10, 89);
 .posts{
   margin-top: 10%;
   margin-bottom: 10%;
-  background: white;
+  /* background: white; */
   justify-content: center;
   align-items: center;
   display: grid;
@@ -371,6 +379,7 @@ box-shadow: 1px 1px 1px rgb(43, 10, 89), -1px -1px 1px rgb(43, 10, 89);
 .pronav {
   height: 4rem;
   width: 4rem;
-  border-radius: 50%;
+  margin: 10px;
+  border-radius: 100%;
 }
 
