@@ -2,9 +2,9 @@ import Comments from "./Comments"
 import CreateComment from "./CreateComment"
 import Client from "../services/api"
 import { BASE_URL } from "../services/api"
-import UpdatePost from "./UpdatePost"
 import { useState } from "react"
 import { useNavigate } from "react-router-dom"
+import star from "../assets/star.png"
 
 
 export default function PostCard (props) {
@@ -65,15 +65,10 @@ export default function PostCard (props) {
       <p>Logged at: {props.post.Card.createdAt}</p>
       </div>
       </div>
-      <div className="report-container">
-        <p className='caption'>{props.post.report}</p>
-        </div>
       <div className="button-container">
-        <button className="likes"onClick={deletePost} style= {{display: props.post.authorId === props.user.id ? 'block' : 'none'}}>Delete</button>
-        <button className="likes"src="https://cdn-icons-png.flaticon.com/128/1077/1077035.png" onClick={updatePost} style= {{display: props.post.authorId === props.user.id ? 'block' : 'none'}}>Update Post</button>
-        <button className="likes" onClick={showCommentForm}>Comment</button>
+        <img className="delete icon" src={star} onClick={deletePost} style= {{display: props.post.authorId === props.user.id ? 'block' : 'none'}}/>
+        <img className="delete icon" src={star} onClick={showCommentForm}/>
       </div>
-      <UpdatePost post={props.post} visible={visible} setVisible={setVisible}/>
       <CreateComment  visible={makeCommentVisible} postId={props.post.id} userId={props.user.id} useEffectToggler={props.useEffectToggler} setUseEffectToggler={props.setUseEffectToggler}/>
       <section className="card-text">
         {props.post.Comments.map((currentComment) => (
