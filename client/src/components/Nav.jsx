@@ -8,6 +8,9 @@ export default function Nav(props) {
   return props.signedIn && props.user ? (
     <header>
       <nav className="nav">
+        <Link to="/feed">
+          <img className="fortuna" src={fortuna} />
+        </Link>
         <ul className="mainnav">
           <img className="pronav" src={props.user.profileImg} />
           <img
@@ -20,9 +23,6 @@ export default function Nav(props) {
           </Link>
           <Link to="/myprofile">
             <img className="mycards icon" src={mycards} />
-          </Link>
-          <Link to="/feed">
-            <img className="fortuna" src={fortuna} />
           </Link>
         </ul>
         <h1 className="welcome"> Welcome {props.user.username}</h1>

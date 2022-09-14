@@ -258,7 +258,7 @@ a{
   display: flex;
   flex-direction: row-reverse;
   height: max-content;
-  justify-content: left;
+  justify-content: center;
   /* background-color:crimson; */
 }
 .post-image{
