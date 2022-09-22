@@ -32,55 +32,46 @@ export default function PostCard(props) {
 
   return props.post ? (
     <div>
-      <div className="header-img-container">
-        <img
-          src={props.post.User.profileImg}
-          alt="profilepic"
-          className="profilepic"
-        />
-        <h2 className="usernamefeed" style={{ display: 'inline' }}>
-          {props.post.User.userName}
-        </h2>
+      <div className="header-container">
+        <h1>{props.post.Card.cardName}</h1>
+        <div className="keywords">
+          {props.post.Card.keywords.map((paragraph) => (
+            <p> • {paragraph}</p>
+          ))}
+        </div>
       </div>
       <div className="card-img-container">
-        <img src={props.post.Card.cardImg} />
-        <div className="fortune-contrainer">
-          <p>
-            <h3>Card: </h3>
-            {props.post.Card.cardName}
-          </p>
-          <p>
-            <h4>Fortune:</h4>
-            {props.post.Card.fortuneTelling.map((paragraph) => (
-              <p> 🔮 {paragraph}</p>
-            ))}
-          </p>
-          <p>
-            <h3>Keywords:</h3>
-            {props.post.Card.keywords.map((paragraph) => (
-              <p> - {paragraph}</p>
-            ))}
-          </p>
+        <img className="tarot-card" src={props.post.Card.cardImg} />
+        <div className="light-shadow"></div>
+        <div className="light">
           <p>
             <h3>Light: </h3>
             {props.post.Card.light.map((paragraph) => (
               <p> - {paragraph}</p>
             ))}
           </p>
+        </div>
+        <div className="shadow">
           <p>
             <h3>Shadow:</h3>
             {props.post.Card.shadow.map((paragraph) => (
               <p> - {paragraph}</p>
             ))}
           </p>
-          <p>
-            <h3>Questions to ask yourself:</h3>
-            {props.post.Card.questionsToAsk.map((paragraph) => (
-              <p> 🔮 {paragraph}</p>
-            ))}
-          </p>
-          <p>Logged at: {props.post.Card.createdAt}</p>
+          {/* <p>Logged at: {props.post.Card.createdAt}</p> */}
         </div>
+      </div>
+      <div className="tellings-container">
+        <p>
+          <h4>Fortune:</h4>
+          {props.post.Card.fortuneTelling.map((paragraph) => (
+            <p> 🔮 {paragraph}</p>
+          ))}
+          <h4>Questions to ask yourself:</h4>
+          {props.post.Card.questionsToAsk.map((paragraph) => (
+            <p> 🔮 {paragraph}</p>
+          ))}
+        </p>
       </div>
       <div className="button-container">
         <img

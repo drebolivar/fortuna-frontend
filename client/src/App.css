@@ -289,6 +289,15 @@ width: 100%;
   width: 100%;
 }
 
+.tarot-card{
+height: 50%;
+width: 50%;
+}
+
+.light-shadow{
+  display: flex;
+  flex-direction: column;
+}
 
 .card-img-container{
 display:flex;
@@ -299,62 +308,54 @@ height: auto;
 width: auto;
 /* margin-bottom: 20%;
 margin-top: 20%; */
-border-radius: 10px;
 background: rgb(114, 206, 255);
 box-shadow: 1px 1px 1px rgb(43, 10, 89), -1px -1px 1px rgb(43, 10, 89);
 }
 
-.fortune-contrainer{
-display: inline;
-text-align: left;
+.tellings-container{
+  display: grid;
+  grid-column: 2;
+  border: #262626 2px solid;
+  background-color: #d6ff6f;
+  text-align: left;
 }
-.header-img-container{
+
+.fortune-contrainer{
+display: flex;
+text-align: left;
+flex-direction: row;
+}
+.header-container{
 display: flex;
 flex-direction: row;
 justify-content: left;
 align-items: center;
-border-radius: 10px;
 background: rgb(224, 179, 224);
 box-shadow: 1px 1px 1px rgb(43, 10, 89), -1px -1px 1px rgb(43, 10, 89);
 }
-.profilepic{
-  width: 4rem;
-  height: 4rem;
-  border-radius: 20%;
-  cursor: pointer;
-  object-fit: cover;  
-  align-items: flex-start;
-}
-.comment-header{
+
+.keywords{
   display: flex;
   flex-direction: row;
-  align-items: center;
-  justify-content: right;
-  height: auto;
-  border: 2px black solid;
-  display: flex;
-  border-radius: 10px;
-  background: rgb(224, 179, 224);
-  box-shadow: 1px 1px 1px rgb(43, 10, 89), -1px -1px 1px rgb(43, 10, 89);
 }
 
  .comment-body{
   display:flex;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
   margin-bottom: 2rem;
   border-radius: 10px;
-  background: rgb(189, 236, 255);
+  background: rgb(241, 241, 241);
   box-shadow: 1px 1px 1px rgb(43, 10, 89), -1px -1px 1px rgb(43, 10, 89);
-  border: 2px black solid
+  border: 3px black dashed
 } 
-.postcomment-container{
+/* .postcomment-container{
   display:flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
-}
+} */
 .ud-container{
   display:flex;
   flex-direction: row;
@@ -374,10 +375,6 @@ box-shadow: 1px 1px 1px rgb(43, 10, 89), -1px -1px 1px rgb(43, 10, 89);
   height: auto;
   border-radius: 20px;
   box-sizing: border-box;
-}
-.usernamefeed{
-  display: flex;
-  flex-direction: row;
 }
 
 .pronav {

@@ -48,15 +48,6 @@ export default function Comments(props) {
 
   return currentComment ? (
     <div>
-      <div className="comment-header">
-        <img
-          className="profilepic"
-          src={currentComment.User.profileImg}
-          alt="profilepic"
-          style={{ height: '30px', width: '30px' }}
-        ></img>
-        <h3>{currentComment.User.username}</h3>
-      </div>
       <div className="comment-body">
         <p>{currentComment.comment}</p>
         <div className="ud-container">
