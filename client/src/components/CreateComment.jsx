@@ -1,15 +1,14 @@
-import {useState} from 'react'
+import { useState } from 'react'
 import axios from 'axios'
 import { BASE_URL } from '../services/api'
 import { useNavigate } from 'react-router-dom'
 import Client from '../services/api'
+import enter from '../assets/enter.png'
 
-
-export default function CreateComment (props) {
-
+export default function CreateComment(props) {
   let navigate = useNavigate()
-  let initialCommentValues = { 
-    userId: props.userId, 
+  let initialCommentValues = {
+    userId: props.userId,
     postId: props.postId,
     comment: '',
     numLikes: 0
@@ -17,7 +16,10 @@ export default function CreateComment (props) {
   const [newCommentValues, setNewCommentValues] = useState(initialCommentValues)
 
   const handleCommentChange = (e) => {
-    setNewCommentValues({ ...newCommentValues, [e.target.name]: e.target.value })
+    setNewCommentValues({
+      ...newCommentValues,
+      [e.target.name]: e.target.value
+    })
   }
 
   const handleCommentSubmit = async (e) => {
@@ -29,25 +31,25 @@ export default function CreateComment (props) {
   }
 
   return (
-    <div style={{display: props.visible ? 'block' : 'none'}}>
+    <div style={{ display: props.visible ? 'block' : 'none' }}>
       <form className="col" onSubmit={handleCommentSubmit}>
-          <div className="input-wrapper">
-            <label htmlFor="comment"></label>
-            <input
-              onChange={handleCommentChange}
-              name="comment"
-              type="text"
-              placeholder="comment"
-              value={newCommentValues.comment}
-              required
-            />
-          </div>
-          <div className='postcomment-container'>
-          <button className='likes'>
-            Post Comment
-          </button>
-          </div>
-        </form>
+        <div className="input-wrapper">
+          <label htmlFor="comment"></label>
+          <textarea
+            onChange={handleCommentChange}
+            name="comment"
+            type="text"
+            cols="60"
+            rows="10"
+            placeholder="Was it in the cards?"
+            value={newCommentValues.comment}
+            required
+          />
+        </div>
+        <div className="postcomment-container">
+          <button className="likes">Enter</button>
+        </div>
+      </form>
     </div>
   )
 }

@@ -243,15 +243,16 @@ a{
 }
 .homepage{
   display: flex;
-  color: green;
+  color: rgb(242, 156, 237);
+  font-weight: 500;
   justify-content: center;
 }
 
 .welcomescreen{
-  background-color: rgb(35, 35, 35);
-  border: white 5px dashed;
+  /* background-color: rgb(35, 35, 35); */
+  /* border: white 5px dashed; */
   font-family: 'VT323';
-  color: 'green';
+  color: 'black';
   font-size: 30px;
 }
 .mainnav{
@@ -305,6 +306,7 @@ box-shadow: 1px 1px 1px rgb(43, 10, 89), -1px -1px 1px rgb(43, 10, 89);
 
 .fortune-contrainer{
 display: inline;
+text-align: left;
 }
 .header-img-container{
 display: flex;
@@ -388,4 +390,10 @@ box-shadow: 1px 1px 1px rgb(43, 10, 89), -1px -1px 1px rgb(43, 10, 89);
 .textbox {
   height: 50%;
   width: auto;
+}
+
+.fortuneteller {
+  max-width: 75%;
+  max-height: 75%
+  
 }

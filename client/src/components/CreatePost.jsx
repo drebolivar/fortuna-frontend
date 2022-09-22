@@ -129,7 +129,7 @@ export default function CreatePost(props) {
           </select>
         </div>
         <div className="input-wrapper">
-          <label htmlFor="report">What happened on this day?</label>
+          {/* <label htmlFor="report">What happened on this day?</label>
           <textarea
             className="txtbx"
             onChange={handlePostChange}
@@ -139,7 +139,7 @@ export default function CreatePost(props) {
             value={newPostValues.report}
             cols="30"
             rows="10"
-          />
+          /> */}
         </div>
 
         {/* <div className="input-wrapper">
@@ -152,7 +152,7 @@ export default function CreatePost(props) {
               required
             />
           </div> */}
-        <button>Create Post</button>
+        <button>Find Your Fortune!</button>
       </form>
     </div>
   )

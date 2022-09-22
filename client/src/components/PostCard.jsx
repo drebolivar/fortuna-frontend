@@ -30,22 +30,6 @@ export default function PostCard(props) {
     setVisibleComment(!makeCommentVisible)
   }
 
-  //handles the like post button (still a work in progress)
-  // const updateLikes = () => {
-  //   let likes = props.post.numLikes
-  // liked ? likes++ : likes--
-  // console.log(likes)
-  // console.log(liked)
-  //   likes++
-  //   setNumOfLikes({numLikes: likes})
-  //   let res = Client.put(`${BASE_URL}/feed/${props.post.id}`, numOfLikes)
-  //   setLiked(!liked)
-  //   console.log(likes)
-  //   console.log(numOfLikes)
-  //   props.setUseEffectToggler(!props.useEffectToggler)
-  //   navigate('/feed')
-  // }
-
   return props.post ? (
     <div>
       <div className="header-img-container">
@@ -62,27 +46,38 @@ export default function PostCard(props) {
         <img src={props.post.Card.cardImg} />
         <div className="fortune-contrainer">
           <p>
-            Card: <br></br>
+            <h3>Card: </h3>
             {props.post.Card.cardName}
           </p>
           <p>
-            Fortune: <br></br>
-            {props.post.Card.fortuneTelling}
+            <h4>Fortune:</h4>
+            {props.post.Card.fortuneTelling.map((paragraph) => (
+              <p> 🔮 {paragraph}</p>
+            ))}
           </p>
           <p>
-            Keywords:<br></br> {props.post.Card.keywords}
+            <h3>Keywords:</h3>
+            {props.post.Card.keywords.map((paragraph) => (
+              <p> - {paragraph}</p>
+            ))}
           </p>
           <p>
-            Light: <br></br>
-            {props.post.Card.light}
+            <h3>Light: </h3>
+            {props.post.Card.light.map((paragraph) => (
+              <p> - {paragraph}</p>
+            ))}
           </p>
           <p>
-            Shadow: <br></br>
-            {props.post.Card.shadow}
+            <h3>Shadow:</h3>
+            {props.post.Card.shadow.map((paragraph) => (
+              <p> - {paragraph}</p>
+            ))}
           </p>
           <p>
-            Questions to ask yourself: <br></br>
-            {props.post.Card.questionsToAsk}
+            <h3>Questions to ask yourself:</h3>
+            {props.post.Card.questionsToAsk.map((paragraph) => (
+              <p> 🔮 {paragraph}</p>
+            ))}
           </p>
           <p>Logged at: {props.post.Card.createdAt}</p>
         </div>

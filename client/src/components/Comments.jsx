@@ -1,15 +1,16 @@
-import { useState, useEffect } from "react"
-import { BASE_URL } from "../services/api"
-import Client from "../services/api"
-import UpdateComment from "./UpdateComment"
-import { useNavigate } from "react-router-dom"
+import { useState, useEffect } from 'react'
+import { BASE_URL } from '../services/api'
+import Client from '../services/api'
+import UpdateComment from './UpdateComment'
+import { useNavigate } from 'react-router-dom'
 
-export default function Comments (props) {
-
+export default function Comments(props) {
   let navigate = useNavigate()
   let [currentComment, setCurrentComment] = useState(null)
   let [visible, setVisible] = useState(false)
-  let [numOfLikes, setNumOfLikes] = useState({numLikes: props.comment.numLikes})
+  let [numOfLikes, setNumOfLikes] = useState({
+    numLikes: props.comment.numLikes
+  })
 
   //ability to toggle the update comment form to be visible or not
   const updateComment = () => {
@@ -24,7 +25,7 @@ export default function Comments (props) {
   //deletes comment
   const deleteComment = () => {
     Client.delete(`${BASE_URL}/comment/${currentComment.id}`)
-    props.setUseEffectToggler(!props.useEffectToggler) 
+    props.setUseEffectToggler(!props.useEffectToggler)
     navigate('/feed')
   }
 
@@ -35,9 +36,9 @@ export default function Comments (props) {
     // console.log(likes)
     // console.log(liked)
     likes++
-    setNumOfLikes({numLikes: likes})
+    setNumOfLikes({ numLikes: likes })
     let res = Client.put(`${BASE_URL}/comment/${currentComment.id}`, numOfLikes)
-    props.setUseEffectToggler(!props.useEffectToggler) 
+    props.setUseEffectToggler(!props.useEffectToggler)
     navigate('/feed')
   }
 
@@ -45,21 +46,48 @@ export default function Comments (props) {
     getComment()
   }, [])
 
-
   return currentComment ? (
     <div>
-      <div className='comment-header'>
-        <img className='profilepic' src={currentComment.User.profileImg} alt='profilepic' style={{height: '30px', width: '30px'}}></img>
+      <div className="comment-header">
+        <img
+          className="profilepic"
+          src={currentComment.User.profileImg}
+          alt="profilepic"
+          style={{ height: '30px', width: '30px' }}
+        ></img>
         <h3>{currentComment.User.username}</h3>
       </div>
       <div className="comment-body">
         <p>{currentComment.comment}</p>
-      <div className="ud-container">
-      {/* <button className="likes" onClick={updateLikes}>{currentComment.numLikes} likes</button> */}
-      <button className="likes" onClick={deleteComment} style= {{display: currentComment.userId === props.userId ? 'block' : 'none'}}>Delete comment</button>
-      <button className="likes" onClick={updateComment} style= {{display: currentComment.userId === props.userId ? 'block' : 'none', }}>Update Comment</button>
-      </div>
-      <UpdateComment commentId = {currentComment.id} comment={currentComment.comment} visible={visible} setVisible={setVisible} useEffectToggler={props.useEffectToggler} setUseEffectToggler={props.setUseEffectToggler}/>
+        <div className="ud-container">
+          {/* <button className="likes" onClick={updateLikes}>{currentComment.numLikes} likes</button> */}
+          <button
+            className="likes"
+            onClick={deleteComment}
+            style={{
+              display: currentComment.userId === props.userId ? 'block' : 'none'
+            }}
+          >
+            Delete
+          </button>
+          <button
+            className="likes"
+            onClick={updateComment}
+            style={{
+              display: currentComment.userId === props.userId ? 'block' : 'none'
+            }}
+          >
+            Update
+          </button>
+        </div>
+        <UpdateComment
+          commentId={currentComment.id}
+          comment={currentComment.comment}
+          visible={visible}
+          setVisible={setVisible}
+          useEffectToggler={props.useEffectToggler}
+          setUseEffectToggler={props.setUseEffectToggler}
+        />
       </div>
     </div>
   ) : (
@@ -67,4 +95,4 @@ export default function Comments (props) {
       <h3>Loading...</h3>
     </div>
   )
-  }
+}
