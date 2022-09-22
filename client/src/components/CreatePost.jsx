@@ -128,30 +128,6 @@ export default function CreatePost(props) {
             <option value="78">King of Pentacles</option>
           </select>
         </div>
-        <div className="input-wrapper">
-          {/* <label htmlFor="report">What happened on this day?</label>
-          <textarea
-            className="txtbx"
-            onChange={handlePostChange}
-            name="report"
-            type="text"
-            placeholder="Was it in the cards?"
-            value={newPostValues.report}
-            cols="30"
-            rows="10"
-          /> */}
-        </div>
-
-        {/* <div className="input-wrapper">
-            <label htmlFor="location">Location</label>
-            <input
-              onChange={handlePostChange}
-              type="text"
-              name="location"
-              value={newPostValues.location}
-              required
-            />
-          </div> */}
         <button>Find Your Fortune!</button>
       </form>
     </div>

@@ -36,18 +36,19 @@ export default function PostCard(props) {
         <h1>{props.post.Card.cardName}</h1>
         <div className="keywords">
           {props.post.Card.keywords.map((paragraph) => (
-            <p> • {paragraph}</p>
+            <p> | {paragraph} |</p>
           ))}
         </div>
       </div>
       <div className="card-img-container">
         <img className="tarot-card" src={props.post.Card.cardImg} />
-        <div className="light-shadow"></div>
+      </div>
+      <div className="light-shadow">
         <div className="light">
           <p>
             <h3>Light: </h3>
             {props.post.Card.light.map((paragraph) => (
-              <p> - {paragraph}</p>
+              <p> {paragraph}</p>
             ))}
           </p>
         </div>
@@ -55,7 +56,7 @@ export default function PostCard(props) {
           <p>
             <h3>Shadow:</h3>
             {props.post.Card.shadow.map((paragraph) => (
-              <p> - {paragraph}</p>
+              <p> {paragraph}</p>
             ))}
           </p>
           {/* <p>Logged at: {props.post.Card.createdAt}</p> */}

@@ -206,13 +206,16 @@ font-family: 'arial';
   cursor: pointer;
   overflow: visible;
 }
-/* .postcard-container{
+.postcard-container{
   display: flex;
   flex-direction: column;
-  margin-top: 10%;
-  margin-bottom: 10%;
-  justify-content: space-between;
-} */
+  margin-top: 5%;
+  margin-bottom: 5%;
+  justify-content: center;
+  align-items: center;
+  height: auto;
+  width: auto;
+}
 ul, ol{
   list-style: none;
 }
@@ -222,24 +225,27 @@ a{
 }
 
 .navbar{
+  display: flex;
+  flex-direction: row;
   justify-content: flex-end;
   width: 100%
 }
 
-.card-icon i{
+/* .card-icon i{
   font-size: 2.4rem;
   cursor: pointer;
-}
+} */
 
-.title-margin{
+/* .title-margin{
   margin-right: .4rem;
-}
+} */
 .feedpost{
   /* margin-left: 25rem; */
   block-size: auto;
   justify-content: center;
   align-items: center;
-  margin: 0 33% 0 33%;
+  align-content: center;
+  margin: 0 20% 0 20%;
 }
 .homepage{
   display: flex;
@@ -254,6 +260,9 @@ a{
   font-family: 'VT323';
   color: 'black';
   font-size: 30px;
+}
+.nav{
+  display: inline;
 }
 .mainnav{
   display: flex;
@@ -290,7 +299,7 @@ width: 100%;
 }
 
 .tarot-card{
-height: 50%;
+height: 100%;
 width: 50%;
 }
 
@@ -303,22 +312,28 @@ width: 50%;
   background-color: white;
   color: black;
   height: 100%;
+  border: black solid 5px;
 }
 
 .shadow{
   background-color: black;
   color: white;
+  height: 100%;
+  border: white solid 5px;
+
 }
 .card-img-container{
 display:flex;
 flex-direction: row;
-/* justify-content: center; */
-align-items:flex-start;
+justify-content: center;
+align-items:center;
 height: auto;
 width: auto;
 /* margin-bottom: 20%;
 margin-top: 20%; */
-background: rgb(114, 206, 255);
+background: url(https://i.imgur.com/6mQmH0m.jpeg);
+background-repeat: repeat;
+/* background: rgb(114, 206, 255); */
 box-shadow: 1px 1px 1px rgb(43, 10, 89), -1px -1px 1px rgb(43, 10, 89);
 }
 
@@ -326,7 +341,7 @@ box-shadow: 1px 1px 1px rgb(43, 10, 89), -1px -1px 1px rgb(43, 10, 89);
   display: grid;
   grid-column: 2;
   border: #262626 2px solid;
-  background-color: #d6ff6f;
+  background-color: #a0ffea;
   text-align: left;
 }
 
@@ -335,13 +350,24 @@ display: flex;
 text-align: left;
 flex-direction: row;
 }
+
+.navbuttons{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  justify-items: center;
+}
+.fortuna {
+  height: 100%;
+  width: 100%;
+}
 .header-container{
 display: flex;
-flex-direction: row;
-justify-content: left;
+flex-direction: column;
 align-items: center;
-background: rgb(224, 179, 224);
+background: rgb(237, 212, 143);
 box-shadow: 1px 1px 1px rgb(43, 10, 89), -1px -1px 1px rgb(43, 10, 89);
+border: #262626 solid 5px;
 }
 
 .keywords{
@@ -351,21 +377,21 @@ box-shadow: 1px 1px 1px rgb(43, 10, 89), -1px -1px 1px rgb(43, 10, 89);
 
  .comment-body{
   display:flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   margin-bottom: 2rem;
   border-radius: 10px;
   background: rgb(241, 241, 241);
   box-shadow: 1px 1px 1px rgb(43, 10, 89), -1px -1px 1px rgb(43, 10, 89);
-  border: 3px black dashed
+  border: 3px black dashed;
 } 
-/* .postcomment-container{
+.postcomment-container{
   display:flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
-} */
+}
 .ud-container{
   display:flex;
   flex-direction: row;
@@ -378,10 +404,11 @@ box-shadow: 1px 1px 1px rgb(43, 10, 89), -1px -1px 1px rgb(43, 10, 89);
   /* background: white; */
   justify-content: center;
   align-items: center;
+  align-content: center;
   display: grid;
   font-family: 'arial';
   color: rgb(43, 10, 89);
-  width: auto;
+  width: 500px;
   height: auto;
   border-radius: 20px;
   box-sizing: border-box;
@@ -400,7 +427,7 @@ box-shadow: 1px 1px 1px rgb(43, 10, 89), -1px -1px 1px rgb(43, 10, 89);
 }
 
 .fortuneteller {
-  max-width: 75%;
-  max-height: 75%
+  max-width: 50%;
+  max-height: 50%
   
 }
