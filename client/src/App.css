@@ -299,6 +299,16 @@ width: 50%;
   flex-direction: column;
 }
 
+.light{
+  background-color: white;
+  color: black;
+  height: 100%;
+}
+
+.shadow{
+  background-color: black;
+  color: white;
+}
 .card-img-container{
 display:flex;
 flex-direction: row;
