@@ -39,7 +39,7 @@ export default function CreateComment(props) {
             onChange={handleCommentChange}
             name="comment"
             type="text"
-            cols="60"
+            cols="50"
             rows="10"
             placeholder="Was it in the cards?"
             value={newCommentValues.comment}
