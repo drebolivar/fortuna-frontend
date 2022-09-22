@@ -10,8 +10,6 @@ import deleteCard from '../assets/delete.png'
 export default function PostCard(props) {
   let navigate = useNavigate()
   let [visible, setVisible] = useState(false)
-  // let [numOfLikes, setNumOfLikes] = useState({numLikes: props.post.numLikes})
-  // let [liked, setLiked] = useState(false)
   let [makeCommentVisible, setVisibleComment] = useState(false)
 
   const deletePost = () => {
@@ -32,6 +30,9 @@ export default function PostCard(props) {
 
   return props.post ? (
     <div>
+      <div className="createdAt">
+        <h3>Card drawn at {props.post.Card.createdAt}_</h3>
+      </div>
       <div className="header-container">
         <h1>{props.post.Card.cardName}</h1>
         <div className="keywords">

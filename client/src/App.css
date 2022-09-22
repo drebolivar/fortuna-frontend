@@ -83,10 +83,11 @@ input {
  button {
   font-family: 'arial';
   color: rgb(43, 10, 89);
-  margin-top: 30px;
+  margin: 20px;
   background: rgb(245, 165, 227);
-  height: 50px;
-  border-radius: 30px;
+  height: 64px;
+  width: 64px;
+  border-radius: 15px;
   cursor: pointer;
   font-weight: 900;
   box-shadow: 6px 6px 6px rgb(43, 10, 89), -6px -6px 6px rgb(43, 10, 89);
@@ -278,7 +279,6 @@ width: 100%;
   justify-content: left;
   padding-bottom: 5%;
   background-color: #d6ff6f;
-  border-radius: 20px;
   border: #262626 2px solid;
   width: 100%;
 }
@@ -297,14 +297,14 @@ width: 50%;
   background-color: white;
   color: black;
   height: 100%;
-  border: black solid 5px;
+  border: black solid 2px;
 }
 
 .shadow{
   background-color: black;
   color: white;
   height: 100%;
-  border: white solid 5px;
+  border: white solid 2px;
 
 }
 .card-img-container{
@@ -316,6 +316,7 @@ height: auto;
 width: auto;
 background: url(https://i.imgur.com/6mQmH0m.jpeg);
 background-repeat: repeat;
+border: black 2px solid;
 /* background: rgb(114, 206, 255); */
 box-shadow: 1px 1px 1px rgb(43, 10, 89), -1px -1px 1px rgb(43, 10, 89);
 }
@@ -350,7 +351,7 @@ flex-direction: column;
 align-items: center;
 background: rgb(237, 212, 143);
 box-shadow: 1px 1px 1px rgb(43, 10, 89), -1px -1px 1px rgb(43, 10, 89);
-border: #262626 solid 5px;
+border: #262626 solid 2px;
 }
 
 .keywords{
@@ -366,10 +367,10 @@ border: #262626 solid 5px;
   height: auto;
   align-items: center;
   margin-bottom: 2rem;
-  border-radius: 10px;
+  /* border-radius: 10px; */
   background: rgb(241, 241, 241);
   box-shadow: 1px 1px 1px rgb(43, 10, 89), -1px -1px 1px rgb(43, 10, 89);
-  border: 3px black dashed;
+  border: 2px black dashed;
 } 
 .postcomment-container{
   display:flex;
@@ -383,6 +384,15 @@ border: #262626 solid 5px;
   justify-content: center;
   align-items: center;
 }
+
+.createdAt{
+  background-color: rgb(0, 8, 255);
+  border: black 2px solid;
+  font-family: 'VT323';
+  font-size: larger;
+  color: #8aff82;
+}
+
 .posts{
   margin-top: 3%;
   margin-bottom: 3%;
@@ -395,7 +405,7 @@ border: #262626 solid 5px;
   color: rgb(43, 10, 89);
   width: 500px;
   height: auto;
-  border-radius: 20px;
+  /* border-radius: 20px; */
   box-sizing: border-box;
 }
 
