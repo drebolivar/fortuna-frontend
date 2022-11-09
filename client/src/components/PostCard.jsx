@@ -29,10 +29,10 @@ export default function PostCard(props) {
   }
 
   return props.post ? (
-    <div>
-      <div className="createdAt">
+    <div className="fullCard">
+      {/* <div className="createdAt">
         <h3>Card drawn at {props.post.Card.createdAt}_</h3>
-      </div>
+      </div> */}
       <div className="header-container">
         <h1>{props.post.Card.cardName}</h1>
         <div className="keywords">

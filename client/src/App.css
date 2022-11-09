@@ -203,7 +203,7 @@ font-family: 'arial';
 }
 .postcard-container{
   display: flex;
-  flex-direction: column;
+  flex-direction:column;
   margin-top: 2%;
   margin-bottom: 2%;
   justify-content: center;
@@ -290,21 +290,22 @@ width: 50%;
 
 .light-shadow{
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  width: 100%;
 }
 
 .light{
   background-color: white;
   color: black;
-  height: 100%;
   border: black solid 2px;
+  width: 100%;
 }
 
 .shadow{
   background-color: black;
   color: white;
-  height: 100%;
   border: white solid 2px;
+  width: 100%;
 
 }
 .card-img-container{
