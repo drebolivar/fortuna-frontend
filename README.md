@@ -1,7 +1,7 @@
 ![Image](client/src/assets/fortunabar.png)
 ### **fortuna (Frontend)**
 ### Andres 'Dre' Bolivar | [08/01/2022]
-### [Github](http://www.github.com/drebolivar) | [Portfolio](http://drebolivar.github.io/portfolio) | [LinkedIn](http://www.linkedin.com/in/drebolivar) | [Instagram](http://www.instagram.com/dredose) 
+### [Github](http://www.github.com/drebolivar) | [Portfolio](http://drebolivar.github.io) | [LinkedIn](http://www.linkedin.com/in/drebolivar) | [Instagram](http://www.instagram.com/dredose) 
 ---
 ## **_Description_**
  A place to log and share daily tarot card readings.
